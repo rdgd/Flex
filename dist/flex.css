@@ -172,7 +172,7 @@
     padding: 0; }
     .flex.no-pad > [class*='col-'] {
       padding-right: 0; }
-  .flex .flex {
+  .flex.inline {
     display: inline-flex;
     display: -webkit-inline-flex; }
   .flex.wrap {
