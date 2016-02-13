@@ -4,46 +4,40 @@
   display: flex;
   display: -webkit-flex;
   @include justify-content(flex-start);
-  @include flex-wrap(nowrap);
+  @include flex-wrap(wrap);
+  padding: $pad 0 $pad $pad;
+  @include flex-direction(row);
 
-  > .flex {
-    display: inline-flex;
-    display: -webkit-inline-flex;
+  & > [class*="col-"] {
+    @include flex-order(12);
+    @include flex-grow(0);
+    @include flex-shrink(0);
+    @include flex-basis(auto);
+    padding-right: $pad;
   }
 
-  &.pad {
-    padding: $pad 0 $pad $pad;
-    & > [class*='col-']:last-of-type {
-      padding-right: $pad;
+  &.no-pad {
+    padding: 0;
+    & > [class*='col-'] {
+      padding-right: 0;
     }
+  }
+
+  .flex {
+    display: inline-flex;
+    display: -webkit-inline-flex;
   }
 
   &.wrap { @include flex-wrap(wrap); }
   &.wrap-reverse { @include flex-wrap(wrap-reverse); }
   &.no-wrap { @include flex-wrap(nowrap); }
 
-  &.row {
-    @include flex-direction(row);
-    &.reverse {
-      @include flex-direction(row-reverse);
-    }
-  }
+  &.reverse { @include flex-direction(row-reverse); }
 
   &.stack {
     @include flex-direction(column);
     &.reverse {
       @include flex-direction(column-reverse);
-    }
-  }
-
-  [class*="col-"] {
-    @include flex-order(12);
-    @include flex-grow(0);
-    @include flex-shrink(0);
-    @include flex-basis(auto);
-    padding-right: $pad;
-    &:last-of-type, &.no-pad {
-      padding-right: 0px;
     }
   }
 
@@ -77,6 +71,32 @@
   .col-10 { @include flex-basis(83.33%); }
   .col-11 { @include flex-basis(91.66%); }
   .col-12 { @include flex-basis(100%); }
+
+  .offset-1 { margin-left: 8.33%; }
+  .offset-2 { margin-left: 16.66%; }
+  .offset-3 { margin-left: 25%; }
+  .offset-4 { margin-left: 33.33%; }
+  .offset-5 { margin-left: 41.66%; }
+  .offset-6 { margin-left: 50%; }
+  .offset-7 { margin-left: 58.33%; }
+  .offset-8 { margin-left: 66.66%; }
+  .offset-9 { margin-left: 75%; }
+  .offset-10 { margin-left: 83.33%; }
+  .offset-11 { margin-left: 91.66%; }
+  .offset-12 { margin-left: 91.66%; }
+
+  .offset-1-right { margin-right: 8.33%; }
+  .offset-2-right { margin-right: 16.66%; }
+  .offset-3-right { margin-right: 25%; }
+  .offset-4-right { margin-right: 33.33%; }
+  .offset-5-right { margin-right: 41.66%; }
+  .offset-6-right { margin-right: 50%; }
+  .offset-7-right { margin-right: 58.33%; }
+  .offset-8-right { margin-right: 66.66%; }
+  .offset-9-right { margin-right: 75%; }
+  .offset-10-right { margin-right: 83.33%; }
+  .offset-11-right { margin-right: 91.66%; }
+  .offset-12-right { margin-right: 91.66%; }
 
   .order-1 { @include flex-order(1); }
   .order-2 { @include flex-order(2); }
@@ -131,7 +151,7 @@
   .justify-end { justify-content: flex-end; }
 }
 
-@media all and (min-width: $break-xl) {
+@media all and (max-width: $break-xl) {
   .flex {
     &.row-xl {
       @include flex-direction(row);
@@ -181,6 +201,32 @@
     .col-10-xl { @include flex-basis(83.33%); }
     .col-11-xl { @include flex-basis(91.66%); }
     .col-12-xl { @include flex-basis(100%); }
+
+    .offset-1-xl { margin-left: 8.33%; }
+    .offset-2-xl { margin-left: 16.66%; }
+    .offset-3-xl { margin-left: 25%; }
+    .offset-4-xl { margin-left: 33.33%; }
+    .offset-5-xl { margin-left: 41.66%; }
+    .offset-6-xl { margin-left: 50%; }
+    .offset-7-xl { margin-left: 58.33%; }
+    .offset-8-xl { margin-left: 66.66%; }
+    .offset-9-xl { margin-left: 75%; }
+    .offset-10-xl { margin-left: 83.33%; }
+    .offset-11-xl { margin-left: 91.66%; }
+    .offset-12-xl { margin-left: 91.66%; }
+
+    .offset-1-right-xl { margin-right: 8.33%; }
+    .offset-2-right-xl { margin-right: 16.66%; }
+    .offset-3-right-xl { margin-right: 25%; }
+    .offset-4-right-xl { margin-right: 33.33%; }
+    .offset-5-right-xl { margin-right: 41.66%; }
+    .offset-6-right-xl { margin-right: 50%; }
+    .offset-7-right-xl { margin-right: 58.33%; }
+    .offset-8-right-xl { margin-right: 66.66%; }
+    .offset-9-right-xl { margin-right: 75%; }
+    .offset-10-right-xl { margin-right: 83.33%; }
+    .offset-11-right-xl { margin-right: 91.66%; }
+    .offset-12-right-xl { margin-right: 91.66%; }
 
     .order-1-xl { @include flex-order(1); }
     .order-2-xl { @include flex-order(2); }
@@ -236,7 +282,7 @@
   }
 }
 
-@media all and (min-width: $break-lg) {
+@media all and (max-width: $break-lg) {
   .flex {
     &.row-lg {
       @include flex-direction(row);
@@ -286,6 +332,32 @@
     .col-10-lg { @include flex-basis(83.33%); }
     .col-11-lg { @include flex-basis(91.66%); }
     .col-12-lg { @include flex-basis(100%); }
+
+    .offset-1-lg { margin-left: 8.33%; }
+    .offset-2-lg { margin-left: 16.66%; }
+    .offset-3-lg { margin-left: 25%; }
+    .offset-4-lg { margin-left: 33.33%; }
+    .offset-5-lg { margin-left: 41.66%; }
+    .offset-6-lg { margin-left: 50%; }
+    .offset-7-lg { margin-left: 58.33%; }
+    .offset-8-lg { margin-left: 66.66%; }
+    .offset-9-lg { margin-left: 75%; }
+    .offset-10-lg { margin-left: 83.33%; }
+    .offset-11-lg { margin-left: 91.66%; }
+    .offset-12-lg { margin-left: 91.66%; }
+
+    .offset-1-right-lg { margin-right: 8.33%; }
+    .offset-2-right-lg { margin-right: 16.66%; }
+    .offset-3-right-lg { margin-right: 25%; }
+    .offset-4-right-lg { margin-right: 33.33%; }
+    .offset-5-right-lg { margin-right: 41.66%; }
+    .offset-6-right-lg { margin-right: 50%; }
+    .offset-7-right-lg { margin-right: 58.33%; }
+    .offset-8-right-lg { margin-right: 66.66%; }
+    .offset-9-right-lg { margin-right: 75%; }
+    .offset-10-right-lg { margin-right: 83.33%; }
+    .offset-11-right-lg { margin-right: 91.66%; }
+    .offset-12-right-lg { margin-right: 91.66%; }
 
     .order-1-lg { @include flex-order(1); }
     .order-2-lg { @include flex-order(2); }
@@ -341,7 +413,7 @@
   }
 }
 
-@media all and (min-width: $break-md) {
+@media all and (max-width: $break-md) {
   .flex {
     &.row-md {
       @include flex-direction(row);
@@ -391,6 +463,32 @@
     .col-10-md { @include flex-basis(83.33%); }
     .col-11-md { @include flex-basis(91.66%); }
     .col-12-md { @include flex-basis(100%); }
+
+    .offset-1-md { margin-left: 8.33%; }
+    .offset-2-md { margin-left: 16.66%; }
+    .offset-3-md { margin-left: 25%; }
+    .offset-4-md { margin-left: 33.33%; }
+    .offset-5-md { margin-left: 41.66%; }
+    .offset-6-md { margin-left: 50%; }
+    .offset-7-md { margin-left: 58.33%; }
+    .offset-8-md { margin-left: 66.66%; }
+    .offset-9-md { margin-left: 75%; }
+    .offset-10-md { margin-left: 83.33%; }
+    .offset-11-md { margin-left: 91.66%; }
+    .offset-12-md { margin-left: 91.66%; }
+
+    .offset-1-right-md { margin-right: 8.33%; }
+    .offset-2-right-md { margin-right: 16.66%; }
+    .offset-3-right-md { margin-right: 25%; }
+    .offset-4-right-md { margin-right: 33.33%; }
+    .offset-5-right-md { margin-right: 41.66%; }
+    .offset-6-right-md { margin-right: 50%; }
+    .offset-7-right-md { margin-right: 58.33%; }
+    .offset-8-right-md { margin-right: 66.66%; }
+    .offset-9-right-md { margin-right: 75%; }
+    .offset-10-right-md { margin-right: 83.33%; }
+    .offset-11-right-md { margin-right: 91.66%; }
+    .offset-12-right-md { margin-right: 91.66%; }
 
     .order-1-md { @include flex-order(1); }
     .order-2-md { @include flex-order(2); }
@@ -446,7 +544,7 @@
   }
 }
 
-@media all and (min-width: $break-sm) {
+@media all and (max-width: $break-sm) {
   .flex {
     &.row-sm {
       @include flex-direction(row);
@@ -496,6 +594,32 @@
     .col-10-sm { @include flex-basis(83.33%); }
     .col-11-sm { @include flex-basis(91.66%); }
     .col-12-sm { @include flex-basis(100%); }
+
+    .offset-1-sm { margin-left: 8.33%; }
+    .offset-2-sm { margin-left: 16.66%; }
+    .offset-3-sm { margin-left: 25%; }
+    .offset-4-sm { margin-left: 33.33%; }
+    .offset-5-sm { margin-left: 41.66%; }
+    .offset-6-sm { margin-left: 50%; }
+    .offset-7-sm { margin-left: 58.33%; }
+    .offset-8-sm { margin-left: 66.66%; }
+    .offset-9-sm { margin-left: 75%; }
+    .offset-10-sm { margin-left: 83.33%; }
+    .offset-11-sm { margin-left: 91.66%; }
+    .offset-12-sm { margin-left: 91.66%; }
+
+    .offset-1-right-sm { margin-right: 8.33%; }
+    .offset-2-right-sm { margin-right: 16.66%; }
+    .offset-3-right-sm { margin-right: 25%; }
+    .offset-4-right-sm { margin-right: 33.33%; }
+    .offset-5-right-sm { margin-right: 41.66%; }
+    .offset-6-right-sm { margin-right: 50%; }
+    .offset-7-right-sm { margin-right: 58.33%; }
+    .offset-8-right-sm { margin-right: 66.66%; }
+    .offset-9-right-sm { margin-right: 75%; }
+    .offset-10-right-sm { margin-right: 83.33%; }
+    .offset-11-right-sm { margin-right: 91.66%; }
+    .offset-12-right-sm { margin-right: 91.66%; }
 
     .order-1-sm { @include flex-order(1); }
     .order-2-sm { @include flex-order(2); }
@@ -551,7 +675,7 @@
   }
 }
 
-@media all and (min-width: $break-xs) {
+@media all and (max-width: $break-xs) {
   .flex {
     &.row-xs {
       @include flex-direction(row);
@@ -601,6 +725,32 @@
     .col-10-xs { @include flex-basis(83.33%); }
     .col-11-xs { @include flex-basis(91.66%); }
     .col-12-xs { @include flex-basis(100%); }
+
+    .offset-1-xs { margin-left: 8.33%; }
+    .offset-2-xs { margin-left: 16.66%; }
+    .offset-3-xs { margin-left: 25%; }
+    .offset-4-xs { margin-left: 33.33%; }
+    .offset-5-xs { margin-left: 41.66%; }
+    .offset-6-xs { margin-left: 50%; }
+    .offset-7-xs { margin-left: 58.33%; }
+    .offset-8-xs { margin-left: 66.66%; }
+    .offset-9-xs { margin-left: 75%; }
+    .offset-10-xs { margin-left: 83.33%; }
+    .offset-11-xs { margin-left: 91.66%; }
+    .offset-12-xs { margin-left: 91.66%; }
+
+    .offset-1-right-xs { margin-right: 8.33%; }
+    .offset-2-right-xs { margin-right: 16.66%; }
+    .offset-3-right-xs { margin-right: 25%; }
+    .offset-4-right-xs { margin-right: 33.33%; }
+    .offset-5-right-xs { margin-right: 41.66%; }
+    .offset-6-right-xs { margin-right: 50%; }
+    .offset-7-right-xs { margin-right: 58.33%; }
+    .offset-8-right-xs { margin-right: 66.66%; }
+    .offset-9-right-xs { margin-right: 75%; }
+    .offset-10-right-xs { margin-right: 83.33%; }
+    .offset-11-right-xs { margin-right: 91.66%; }
+    .offset-12-right-xs { margin-right: 91.66%; }
 
     .order-1-xs { @include flex-order(1); }
     .order-2-xs { @include flex-order(2); }
