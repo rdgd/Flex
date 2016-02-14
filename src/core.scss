@@ -1,6 +1,6 @@
 *, *:before, *:after { @include box-sizing(border-box); }
 
-.flex {
+.grid {
   display: flex;
   display: -webkit-flex;
   @include justify-content(flex-start);
@@ -8,7 +8,7 @@
   padding: $pad 0 $pad $pad;
   @include flex-direction(row);
 
-  & > [class*="col-"] {
+  & > [class*="span-"] {
     @include flex-order(12);
     @include flex-grow(0);
     @include flex-shrink(0);
@@ -18,7 +18,7 @@
 
   &.no-pad {
     padding: 0;
-    & > [class*='col-'] {
+    & > [class*='span-'] {
       padding-right: 0;
     }
   }
@@ -53,24 +53,18 @@
   &.align-end { align-items: flex-end; }
   &.align-stretch { align-items: stretch; }
 
-  & > .align-baseline { align-content: baseline; }
-  & > .align-center { align-content: center; }
-  & > .align-start { align-content: flex-start; }
-  & > .align-end { align-content: flex-end; }
-  & > .align-stretch { align-content: stretch; }
-
-  & > .col-1 { @include flex-basis(8.33%); }
-  & > .col-2 { @include flex-basis(16.66%); }
-  & > .col-3 { @include flex-basis(25%); }
-  & > .col-4 { @include flex-basis(33.33%); }
-  & > .col-5 { @include flex-basis(41.66%); }
-  & > .col-6 { @include flex-basis(50%); }
-  & > .col-7 { @include flex-basis(58.33%); }
-  & > .col-8 { @include flex-basis(66.66%); }
-  & > .col-9 { @include flex-basis(75%); }
-  & > .col-10 { @include flex-basis(83.33%); }
-  & > .col-11 { @include flex-basis(91.66%); }
-  & > .col-12 { @include flex-basis(100%); }
+  & > .span-1 { @include flex-basis(8.33%); }
+  & > .span-2 { @include flex-basis(16.66%); }
+  & > .span-3 { @include flex-basis(25%); }
+  & > .span-4 { @include flex-basis(33.33%); }
+  & > .span-5 { @include flex-basis(41.66%); }
+  & > .span-6 { @include flex-basis(50%); }
+  & > .span-7 { @include flex-basis(58.33%); }
+  & > .span-8 { @include flex-basis(66.66%); }
+  & > .span-9 { @include flex-basis(75%); }
+  & > .span-10 { @include flex-basis(83.33%); }
+  & > .span-11 { @include flex-basis(91.66%); }
+  & > .span-12 { @include flex-basis(100%); }
 
   & > .offset-1 { margin-left: 8.33%; }
   & > .offset-2 { margin-left: 16.66%; }
@@ -143,16 +137,10 @@
   & > .align-start { align-self: flex-start; }
   & > .align-end { align-self: flex-end; }
   & > .align-stretch { align-self: stretch; }
-
-  & > .justify-space-around { justify-content: space-around; }
-  & > .justify-space-between { justify-content: space-between; }
-  & > .justify-center { justify-content: center; }
-  & > .justify-start { justify-content: flex-start; }
-  & > .justify-end { justify-content: flex-end; }
 }
 
 @media all and (max-width: $break-xl) {
-  .flex {
+  .grid {
     &.row-xl {
       @include flex-direction(row);
       &.reverse-xl {
@@ -183,24 +171,18 @@
     &.align-end-xl { align-items: flex-end; }
     &.align-stretch-xl { align-items: stretch; }
 
-    & > .align-baseline-xl { align-content: baseline; }
-    & > .align-center-xl { align-content: center; }
-    & > .align-start-xl { align-content: flex-start; }
-    & > .align-end-xl { align-content: flex-end; }
-    & > .align-stretch-xl { align-content: stretch; }
-
-    & > .col-1-xl { @include flex-basis(8.33%); }
-    & > .col-2-xl { @include flex-basis(16.66%); }
-    & > .col-3-xl { @include flex-basis(25%); }
-    & > .col-4-xl { @include flex-basis(33.33%); }
-    & > .col-5-xl { @include flex-basis(41.66%); }
-    & > .col-6-xl { @include flex-basis(50%); }
-    & > .col-7-xl { @include flex-basis(58.33%); }
-    & > .col-8-xl { @include flex-basis(66.66%); }
-    & > .col-9-xl { @include flex-basis(75%); }
-    & > .col-10-xl { @include flex-basis(83.33%); }
-    & > .col-11-xl { @include flex-basis(91.66%); }
-    & > .col-12-xl { @include flex-basis(100%); }
+    & > .span-1-xl { @include flex-basis(8.33%); }
+    & > .span-2-xl { @include flex-basis(16.66%); }
+    & > .span-3-xl { @include flex-basis(25%); }
+    & > .span-4-xl { @include flex-basis(33.33%); }
+    & > .span-5-xl { @include flex-basis(41.66%); }
+    & > .span-6-xl { @include flex-basis(50%); }
+    & > .span-7-xl { @include flex-basis(58.33%); }
+    & > .span-8-xl { @include flex-basis(66.66%); }
+    & > .span-9-xl { @include flex-basis(75%); }
+    & > .span-10-xl { @include flex-basis(83.33%); }
+    & > .span-11-xl { @include flex-basis(91.66%); }
+    & > .span-12-xl { @include flex-basis(100%); }
 
     & > .offset-1-xl { margin-left: 8.33%; }
     & > .offset-2-xl { margin-left: 16.66%; }
@@ -273,17 +255,11 @@
     & > .align-start-xl { align-self: flex-start; }
     & > .align-end-xl { align-self: flex-end; }
     & > .align-stretch-xl { align-self: stretch; }
-
-    & > .justify-space-around-xl { justify-content: space-around; }
-    & > .justify-space-between-xl { justify-content: space-between; }
-    & > .justify-center-xl { justify-content: center; }
-    & > .justify-start-xl { justify-content: flex-start; }
-    & > .justify-end-xl { justify-content: flex-end; }
   }
 }
 
 @media all and (max-width: $break-lg) {
-  .flex {
+  .grid {
     &.row-lg {
       @include flex-direction(row);
       &.reverse-lg {
@@ -314,24 +290,18 @@
     &.align-end-lg { align-items: flex-end; }
     &.align-stretch-lg { align-items: stretch; }
 
-    & > .align-baseline-lg { align-content: baseline; }
-    & > .align-center-lg { align-content: center; }
-    & > .align-start-lg { align-content: flex-start; }
-    & > .align-end-lg { align-content: flex-end; }
-    & > .align-stretch-lg { align-content: stretch; }
-
-    & > .col-1-lg { @include flex-basis(8.33%); }
-    & > .col-2-lg { @include flex-basis(16.66%); }
-    & > .col-3-lg { @include flex-basis(25%); }
-    & > .col-4-lg { @include flex-basis(33.33%); }
-    & > .col-5-lg { @include flex-basis(41.66%); }
-    & > .col-6-lg { @include flex-basis(50%); }
-    & > .col-7-lg { @include flex-basis(58.33%); }
-    & > .col-8-lg { @include flex-basis(66.66%); }
-    & > .col-9-lg { @include flex-basis(75%); }
-    & > .col-10-lg { @include flex-basis(83.33%); }
-    & > .col-11-lg { @include flex-basis(91.66%); }
-    & > .col-12-lg { @include flex-basis(100%); }
+    & > .span-1-lg { @include flex-basis(8.33%); }
+    & > .span-2-lg { @include flex-basis(16.66%); }
+    & > .span-3-lg { @include flex-basis(25%); }
+    & > .span-4-lg { @include flex-basis(33.33%); }
+    & > .span-5-lg { @include flex-basis(41.66%); }
+    & > .span-6-lg { @include flex-basis(50%); }
+    & > .span-7-lg { @include flex-basis(58.33%); }
+    & > .span-8-lg { @include flex-basis(66.66%); }
+    & > .span-9-lg { @include flex-basis(75%); }
+    & > .span-10-lg { @include flex-basis(83.33%); }
+    & > .span-11-lg { @include flex-basis(91.66%); }
+    & > .span-12-lg { @include flex-basis(100%); }
 
     & > .offset-1-lg { margin-left: 8.33%; }
     & > .offset-2-lg { margin-left: 16.66%; }
@@ -404,17 +374,11 @@
     & > .align-start-lg { align-self: flex-start; }
     & > .align-end-lg { align-self: flex-end; }
     & > .align-stretch-lg { align-self: stretch; }
-
-    & > .justify-space-around-lg { justify-content: space-around; }
-    & > .justify-space-between-lg { justify-content: space-between; }
-    & > .justify-center-lg { justify-content: center; }
-    & > .justify-start-lg { justify-content: flex-start; }
-    & > .justify-end-lg { justify-content: flex-end; }
   }
 }
 
 @media all and (max-width: $break-md) {
-  .flex {
+  .grid {
     &.row-md {
       @include flex-direction(row);
       &.reverse-md {
@@ -445,24 +409,18 @@
     &.align-end-md { align-items: flex-end; }
     &.align-stretch-md { align-items: stretch; }
 
-    & > .align-baseline-md { align-content: baseline; }
-    & > .align-center-md { align-content: center; }
-    & > .align-start-md { align-content: flex-start; }
-    & > .align-end-md { align-content: flex-end; }
-    & > .align-stretch-md { align-content: stretch; }
-
-    & > .col-1-md { @include flex-basis(8.33%); }
-    & > .col-2-md { @include flex-basis(16.66%); }
-    & > .col-3-md { @include flex-basis(25%); }
-    & > .col-4-md { @include flex-basis(33.33%); }
-    & > .col-5-md { @include flex-basis(41.66%); }
-    & > .col-6-md { @include flex-basis(50%); }
-    & > .col-7-md { @include flex-basis(58.33%); }
-    & > .col-8-md { @include flex-basis(66.66%); }
-    & > .col-9-md { @include flex-basis(75%); }
-    & > .col-10-md { @include flex-basis(83.33%); }
-    & > .col-11-md { @include flex-basis(91.66%); }
-    & > .col-12-md { @include flex-basis(100%); }
+    & > .span-1-md { @include flex-basis(8.33%); }
+    & > .span-2-md { @include flex-basis(16.66%); }
+    & > .span-3-md { @include flex-basis(25%); }
+    & > .span-4-md { @include flex-basis(33.33%); }
+    & > .span-5-md { @include flex-basis(41.66%); }
+    & > .span-6-md { @include flex-basis(50%); }
+    & > .span-7-md { @include flex-basis(58.33%); }
+    & > .span-8-md { @include flex-basis(66.66%); }
+    & > .span-9-md { @include flex-basis(75%); }
+    & > .span-10-md { @include flex-basis(83.33%); }
+    & > .span-11-md { @include flex-basis(91.66%); }
+    & > .span-12-md { @include flex-basis(100%); }
 
     & > .offset-1-md { margin-left: 8.33%; }
     & > .offset-2-md { margin-left: 16.66%; }
@@ -535,17 +493,11 @@
     & > .align-start-md { align-self: flex-start; }
     & > .align-end-md { align-self: flex-end; }
     & > .align-stretch-md { align-self: stretch; }
-
-    & > .justify-space-around-md { justify-content: space-around; }
-    & > .justify-space-between-md { justify-content: space-between; }
-    & > .justify-center-md { justify-content: center; }
-    & > .justify-start-md { justify-content: flex-start; }
-    & > .justify-end-md { justify-content: flex-end; }
   }
 }
 
 @media all and (max-width: $break-sm) {
-  .flex {
+  .grid {
     &.row-sm {
       @include flex-direction(row);
       &.reverse-sm {
@@ -570,30 +522,24 @@
     &.justify-space-around-sm { @include justify-content(space-around); }
     &.justify-space-between-sm { @include justify-content(space-between); }
 
-    &.align-baseline-sm { align-items: baseline; }
-    &.align-center-sm { align-items: center; }
-    &.align-start-sm { align-items: flex-start; }
-    &.align-end-sm { align-items: flex-end; }
-    &.align-stretch-sm { align-items: stretch; }
-
     & > .align-baseline-sm { align-content: baseline; }
     & > .align-center-sm { align-content: center; }
     & > .align-start-sm { align-content: flex-start; }
     & > .align-end-sm { align-content: flex-end; }
     & > .align-stretch-sm { align-content: stretch; }
 
-    & > .col-1-sm { @include flex-basis(8.33%); }
-    & > .col-2-sm { @include flex-basis(16.66%); }
-    & > .col-3-sm { @include flex-basis(25%); }
-    & > .col-4-sm { @include flex-basis(33.33%); }
-    & > .col-5-sm { @include flex-basis(41.66%); }
-    & > .col-6-sm { @include flex-basis(50%); }
-    & > .col-7-sm { @include flex-basis(58.33%); }
-    & > .col-8-sm { @include flex-basis(66.66%); }
-    & > .col-9-sm { @include flex-basis(75%); }
-    & > .col-10-sm { @include flex-basis(83.33%); }
-    & > .col-11-sm { @include flex-basis(91.66%); }
-    & > .col-12-sm { @include flex-basis(100%); }
+    & > .span-1-sm { @include flex-basis(8.33%); }
+    & > .span-2-sm { @include flex-basis(16.66%); }
+    & > .span-3-sm { @include flex-basis(25%); }
+    & > .span-4-sm { @include flex-basis(33.33%); }
+    & > .span-5-sm { @include flex-basis(41.66%); }
+    & > .span-6-sm { @include flex-basis(50%); }
+    & > .span-7-sm { @include flex-basis(58.33%); }
+    & > .span-8-sm { @include flex-basis(66.66%); }
+    & > .span-9-sm { @include flex-basis(75%); }
+    & > .span-10-sm { @include flex-basis(83.33%); }
+    & > .span-11-sm { @include flex-basis(91.66%); }
+    & > .span-12-sm { @include flex-basis(100%); }
 
     & > .offset-1-sm { margin-left: 8.33%; }
     & > .offset-2-sm { margin-left: 16.66%; }
@@ -666,17 +612,11 @@
     & > .align-start-sm { align-self: flex-start; }
     & > .align-end-sm { align-self: flex-end; }
     & > .align-stretch-sm { align-self: stretch; }
-
-    & > .justify-space-around-sm { justify-content: space-around; }
-    & > .justify-space-between-sm { justify-content: space-between; }
-    & > .justify-center-sm { justify-content: center; }
-    & > .justify-start-sm { justify-content: flex-start; }
-    & > .justify-end-sm { justify-content: flex-end; }
   }
 }
 
 @media all and (max-width: $break-xs) {
-  .flex {
+  .grid {
     &.row-xs {
       @include flex-direction(row);
       &.reverse-xs {
@@ -707,24 +647,18 @@
     &.align-end-xs { align-items: flex-end; }
     &.align-stretch-xs { align-items: stretch; }
 
-    & > .align-baseline-xs { align-content: baseline; }
-    & > .align-center-xs { align-content: center; }
-    & > .align-start-xs { align-content: flex-start; }
-    & > .align-end-xs { align-content: flex-end; }
-    & > .align-stretch-xs { align-content: stretch; }
-
-    & > .col-1-xs { @include flex-basis(8.33%); }
-    & > .col-2-xs { @include flex-basis(16.66%); }
-    & > .col-3-xs { @include flex-basis(25%); }
-    & > .col-4-xs { @include flex-basis(33.33%); }
-    & > .col-5-xs { @include flex-basis(41.66%); }
-    & > .col-6-xs { @include flex-basis(50%); }
-    & > .col-7-xs { @include flex-basis(58.33%); }
-    & > .col-8-xs { @include flex-basis(66.66%); }
-    & > .col-9-xs { @include flex-basis(75%); }
-    & > .col-10-xs { @include flex-basis(83.33%); }
-    & > .col-11-xs { @include flex-basis(91.66%); }
-    & > .col-12-xs { @include flex-basis(100%); }
+    & > .span-1-xs { @include flex-basis(8.33%); }
+    & > .span-2-xs { @include flex-basis(16.66%); }
+    & > .span-3-xs { @include flex-basis(25%); }
+    & > .span-4-xs { @include flex-basis(33.33%); }
+    & > .span-5-xs { @include flex-basis(41.66%); }
+    & > .span-6-xs { @include flex-basis(50%); }
+    & > .span-7-xs { @include flex-basis(58.33%); }
+    & > .span-8-xs { @include flex-basis(66.66%); }
+    & > .span-9-xs { @include flex-basis(75%); }
+    & > .span-10-xs { @include flex-basis(83.33%); }
+    & > .span-11-xs { @include flex-basis(91.66%); }
+    & > .span-12-xs { @include flex-basis(100%); }
 
     & > .offset-1-xs { margin-left: 8.33%; }
     & > .offset-2-xs { margin-left: 16.66%; }
@@ -797,11 +731,5 @@
     & > .align-start-xs { align-self: flex-start; }
     & > .align-end-xs { align-self: flex-end; }
     & > .align-stretch-xs { align-self: stretch; }
-
-    & > .justify-space-around-xs { justify-content: space-around; }
-    & > .justify-space-between-xs { justify-content: space-between; }
-    & > .justify-center-xs { justify-content: center; }
-    & > .justify-start-xs { justify-content: flex-start; }
-    & > .justify-end-xs { justify-content: flex-end; }
   }
 }
