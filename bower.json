@@ -1,5 +1,5 @@
 {
-  "name": "flex",
+  "name": "Flex",
   "description": "CSS Grid which uses flexbox under the hood, and provides a simple CSS class-based API for rapidly building fluid/responsive webpage layouts on a 12 column grid.",
   "main": "dist/flex.min.css",
   "authors": [
