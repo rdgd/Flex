@@ -1,7 +1,7 @@
 {
-  "name": "flx-grid",
+  "name": "flex-sass",
   "version": "2.0.2",
-  "description": "",
+  "description": "The Flex CSS grid, written in SASS, and available to you in this package.",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
