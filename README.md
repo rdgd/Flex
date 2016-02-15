@@ -1,8 +1,20 @@
-# Flex
-CSS Grid which uses flexbox under the hood, and provides a simple CSS class-based API for rapidly building fluid/responsive webpage layouts on a 12 column grid.
+<table>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/rdgd/Flex/c7659fc59d90a2dd70b9aa9cf0c464934f18eea4/media/logo.png" alt="Flex" height="69">
+    </td>
+    <td>
+      <img src="https://nodei.co/npm/flex-sass.png?downloads=true&downloadRank=true&stars=true" alt="flex-sass" height="69">
+    </td>
+  </tr>
+</table>
 
-## Base Classes
-### Parent Container
+[![Bower version](https://badge.fury.io/bo/Flex.svg)](https://badge.fury.io/bo/Flex)
+
+A CSS Grid which uses flexbox under the hood, and provides a simple CSS class-based API for rapidly building fluid/responsive webpage layouts on a 12 column grid.
+
+### Base Classes
+#### Parent Container
 
 ---
 `.grid`
@@ -72,7 +84,7 @@ Aligns the items in the container as indicated in the class name.
 
 ---
 
-### Items
+#### Items
 The following classes apply **only** to elements which are **direct descendants** of a parent container which has the class `.grid`
 
 ---
@@ -194,7 +206,7 @@ Specifies the velocity at which the item appears to shrink relative to its sibli
 Overrides the default align-items attribute, which is specified by the `.align-` class on the parent container.
 
 ---
-## Helpers
+### Helpers
 
 ---
 `.block`
@@ -244,7 +256,7 @@ Justifies contained text to the center.
 Justifies contained text to the right.
 
 ---
-## Breakpoints
+### Breakpoints
 Breakpoints are based purely on viewport size. To target a specific viewport size, simply append '-xl', '-lg', '-md', 'sm', 'xs' to any base class or helper class.
 
 ###### `-xl` (max-width 1600px)
