@@ -15,6 +15,6 @@
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-sass": "^1.1.0",
-    "sass-commons": "git://github.com/rdgd/sass-commons.git"
+    "sass-commons": "^1.0.0"
   }
 }
