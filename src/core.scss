@@ -389,7 +389,7 @@
     &.stack-md {
       @include flex-direction(column);
       &.reverse-md {
-        @include flex-direction(row-reverse);
+        @include flex-direction(column-reverse);
       }
     }
 
@@ -508,7 +508,7 @@
     &.stack-sm {
       @include flex-direction(column);
       &.reverse-sm {
-        @include flex-direction(row-reverse);
+        @include flex-direction(column-reverse);
       }
     }
 
@@ -627,7 +627,7 @@
     &.stack-xs {
       @include flex-direction(column);
       &.reverse-xs {
-        @include flex-direction(row-reverse);
+        @include flex-direction(column-reverse);
       }
     }
 

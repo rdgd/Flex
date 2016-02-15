@@ -937,8 +937,8 @@
     flex-direction: column;
     -webkit-flex-direction: column; }
     .grid.stack-md.reverse-md {
-      flex-direction: row-reverse;
-      -webkit-flex-direction: row-reverse; }
+      flex-direction: column-reverse;
+      -webkit-flex-direction: column-reverse; }
   .grid.wrap-md {
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap; }
@@ -1189,8 +1189,8 @@
     flex-direction: column;
     -webkit-flex-direction: column; }
     .grid.stack-sm.reverse-sm {
-      flex-direction: row-reverse;
-      -webkit-flex-direction: row-reverse; }
+      flex-direction: column-reverse;
+      -webkit-flex-direction: column-reverse; }
   .grid.wrap-sm {
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap; }
@@ -1441,8 +1441,8 @@
     flex-direction: column;
     -webkit-flex-direction: column; }
     .grid.stack-xs.reverse-xs {
-      flex-direction: row-reverse;
-      -webkit-flex-direction: row-reverse; }
+      flex-direction: column-reverse;
+      -webkit-flex-direction: column-reverse; }
   .grid.wrap-xs {
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap; }
