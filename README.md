@@ -6,10 +6,15 @@
     <td>
       <img src="https://nodei.co/npm/flex-sass.png?downloads=true&downloadRank=true&stars=true" alt="flex-sass" height="69">
     </td>
+
+    <td width="200">
+    `bower install Flex`
+    <br><br>
+    [![Bower version](https://badge.fury.io/bo/Flex.svg)](https://badge.fury.io/bo/Flex)
+
+    </td>
   </tr>
 </table>
-
-[![Bower version](https://badge.fury.io/bo/Flex.svg)](https://badge.fury.io/bo/Flex)
 
 A CSS Grid which uses flexbox under the hood, and provides a simple CSS class-based API for rapidly building fluid/responsive webpage layouts on a 12 column grid.
 
