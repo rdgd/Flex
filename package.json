@@ -1,6 +1,6 @@
 {
   "name": "flex-sass",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "The Flex CSS grid, written in SASS, and available to you in this package.",
   "main": "",
   "scripts": {
@@ -15,7 +15,7 @@
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-sass": "^1.1.0",
-    "sass-commons": "^1.0.0",
-    "sass-helper-classes": "^1.0.0"
+    "sass-commons": "^2.0.0",
+    "sass-helper-classes": "^2.0.0"
   }
 }
