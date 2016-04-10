@@ -8,15 +8,15 @@
     </td>
 
     <td width="200">
-    `bower install Flex`
-    <br><br>
-    [![Bower version](https://badge.fury.io/bo/Flex.svg)](https://badge.fury.io/bo/Flex)
-
+      <img src="https://img.shields.io/bower/v/Flex.svg" alt="Flex">
     </td>
   </tr>
 </table>
 
 A CSS Grid which uses flexbox under the hood, and provides a simple CSS class-based API for rapidly building fluid/responsive webpage layouts on a 12 column grid.
+
+### Get it
+`bower install Flex` or `npm install flex-sass`
 
 ### Base Classes
 #### Parent Container
