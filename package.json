@@ -1,6 +1,6 @@
 {
   "name": "flex-sass",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "The Flex CSS grid, written in SASS, and available to you in this package.",
   "main": "",
   "scripts": {
