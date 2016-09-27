@@ -117,7 +117,7 @@ $breakpoints: $break-min-xs 'xs', $break-min-sm 'sm', $break-min-md 'md', $break
         $off: $i - 1;
         & > .span-#{$i}-#{nth($break, 2)} { @include flex-basis($i / 12 * 100%); }
         & > .offset-#{$off}-#{nth($break, 2)} { margin-left: (($i - 1) / 12) * 100%; }
-        & > .offset-#{$off}-right#{$i}-#{nth($break, 2)} { margin-left: (($i - 1) / 12) * 100%; }
+        & > .offset-#{$off}-right-#{nth($break, 2)} { margin-left: (($i - 1) / 12) * 100%; }
         & > .order-#{$i}-#{nth($break, 2)} { @include flex-order($i); }
         & > .grow-#{$i}-#{nth($break, 2)} { @include flex-grow($i); }
         & > .shrink-#{$i}-#{nth($break, 2)} { @include flex-shrink($i); }

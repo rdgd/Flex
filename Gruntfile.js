@@ -1,6 +1,9 @@
 module.exports = function (grunt) {
   grunt.initConfig({
     sass: {
+      options: {
+        precision: 2
+      },
       dist: {
         files: {
           'dist/flex.css': 'src/main.scss'
